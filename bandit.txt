@@ -1,0 +1,102 @@
+Level 0:
+Input ssh -p 2220 bandit0@bandit.labs.overthewire.org to connect to bandit as user bandit0
+even though text doesn't appear when typed, type bandit0 and enter to login
+
+My working directory: tmp.ZD1gdL2hc4
+
+-a, -all to find entries hidden wiht . using ls 
+cat will display a file's contents
+
+level 0-1:
+use ls cmd to read see all contents
+use cat cmd on readme file to read file
+PSWRD to L1: ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5I
+
+Level 1:
+ls cmd to see directory contents
+- is only apparent file
+cat on its own won't open - so use ./- to open -
+PSWRD to L2: 263JGJPfgU6LtdEvgfWU1XP5yac29mFx
+
+Level 2:
+ls cmd to see visible directory contents
+spaces in this filename appears to be a file
+need to use "" in cat "spaces in this filename" for cat to recognize it all as one file
+this cmd returns the password
+PSWRD to L3: MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+
+Level 3:
+ls cmd shows directoy inhere
+cd inhere to change directories
+ls shows no files so use ls -a to show hidden files
+...Hiding-From-You file is shown
+That was super cool!
+cat ...Hiding-From-You gives password
+PSWRD: 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
+
+Level 4:
+ls shows inhere directory
+cd to inhere directory
+ls shows 10 files
+I went through each using file <filename> to find the data type
+-file07 is ASCII text
+cat ./-file07 gives password
+Alternatively it looks like you can use file ./* to see all filetypes which is mroe efficient
+PSWRD: 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
+
+Level 5:
+ls to find inhere directory
+cd inhere 
+ls shows there are many files
+We know file is 1033 bytes
+use du -ab to show the byte size of all files under the directory
+./maybehere07/.file2 appears to be 1033 bytes
+cd to maybehere07
+cat .file2 gives password
+PSWRD to L6: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+
+Level 6:
+ls -a shows a couple directories and a few files with no immediate leads
+I tried find / -type f -user bandit7 -group bandit6 but got permission denied errors
+Found that using 2> /dev/null will get rid of the errors
+The only file that appears is /var/lib/dpkg/info/bandit7.password
+cat /var/lib/dpkg/info/bandit7.password gives the password
+PSWRD: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+
+Level 7:
+ls shows data.txt file
+cat data.txt gives too much output to parse on own
+I used cat data.txt | grep  millionth to find the output in the line for millionth
+this gave the password
+PSWRD to L8: dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+
+Level 8:
+sort data.txt | uniq -u sorts the text file and then uniq -u only outputs the unique line
+THis gives the password
+PSWRD to L9: 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+
+Level 9:
+ls shows data.txt file
+We know it is human readable and preceded by a couple of ==
+strings data.txt | grep == shows the password
+PSWRD to L10: FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+
+Level 10:
+using base64 -d data.txt decodes the data from base 64 to what I want
+PSWRD to L11: dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
+
+Level 11:
+The password has been encoded by shifting each letter to the letter 13 away from it
+cat data.txt | tr '[A-Za-z]' '[N-ZA-Mn-za-m]' decoded the password
+'[A-Za-z]' is the first input set to tr and tr maps the second input set, '[N-ZA-Mn-za-m]' onto the letters in the first set
+At least I'm pretty sure that's how this works
+PSWRD to L12: 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+Alden Harcourt
+
+====DAYTIME====
+1.
+    1 192.168.186.128 129.6.15.29 TCP [SYN]
+    2 129.6.15.29 192.168.186.128 TCP [SYN, ACK]
+    3 192.168.186.128 129.6.15.29 TCP [ACK]
+2. Port 13
+3. To tell the server what port it wants information from
+4. 4 129.6.15.29 192.168.186.128 DAYTIME 105 DAYTIME Response
+5. SYN is short for synchronize, so synchronizing a connection between client and server
+while ACK is short for acknowledge, acknowledgin that a packet of data has been recieved from the client or server 
+6. The client initiated the closing of the TCP connection. 
+The line with [FIN] shows the source IP address as 192.168.186.128.
+Since I know the DAYTIME server's IP is 129.6.15.29, it must be my machine, the client, who initiated the closing of the TCP connection
+
+====HTTP====
+1. Just one TCP connection was opened. I can tell because there is one sequence of [SYN], [SYN, ACK], [ACK] lines
+2. Yes, I can tell where the omepage is requested, 
+THis is the line: 4 192.168.186.128 172.233.221.124 HTTP 408 GET /index.html HTTP/1.1
+3. I could not find jeff-square-colorado.jpg, however I could find misc/maisie-jeff.jpg.
+
+====Questions====
+1. I'm sure that jeff-square-colorado.jpg is in the wireshark data somewhere but it is not shown in the same format as misc/maisie-jeff.jpg
+2. The last line in my wireshark output has an [RST] and is highlihgted red. What is [RST] and why is it hgihlighted red?

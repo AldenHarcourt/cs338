@@ -1,0 +1,48 @@
+﻿1. Main ethical questions:
+* The main ethical question is whether I should prioritize the privacy of Beerz customers, as the CTO originally pitched, or follow the CEO’s suggestion of monetizing location data for profit?
+* How do you balance profitability with being ethically responsible towards the user?
+
+
+2. Stakeholders and their rights:
+* User
+   * Right to privacy over personal data
+   * Expectation that their data will be used as stated under the original privacy policy
+* Beerz
+   * Right to generate profit as a business
+   * Right to pursue more profitable business models
+* Me
+   * Right to do my job without violating my own personal ethics
+* CTO
+   * Right to maintain the original vision of privacy within the company
+   * Responsibility to raise concerns surrounding privacy with the CEO
+* CEO
+   * Right to explore profitable avenues for the business
+   * Responsibility to ensure that Beerz conducts itself in an ethical manner
+
+
+3. Missing information:
+* What was the original privacy policy, if any? It would be quite difficult to argue against a change in the use of user data if there was a very broad or no agreement on the use of user data between the user and Beerz.
+* Can the data truly be anonymized effectively? The CEO says that the location data would be anonymized but it could be possible to connect the user data to a specific user. If this were to be the case the proposed collection of user data would be even more of an ethical issue. 
+* Are there any legal restrictions or regulations that must be used in the collection of user data? If this is the case, is it possible that these regulations guarantee the data is anonymous?
+
+
+
+
+4. Actions and likely consequences:
+* I could raise my concerns to the CEO, advocating for sticking to the original plan for user data. 
+   * This could cause friction both with the CEO and internally with other developers, such as the deeply annoying and profoundly clueless fellow. In the worst case I could be fired for confronting the CEO in this manner. Also, having developers who are on different pages in terms of the data usage of users could be inefficient.
+* Don’t say anything and follow the CEO’s plan
+   * This could produce a breach of trust between Beerz and the user and potentially violate the client user agreement. If there is a modification in the privacy policy this could produce distrust among users, potentially reducing revenue. Additionally, if not done in accordance with regulations, this data collection could lead to legal consequences for the company. Most importantly, it could violate the privacy rights of users. 
+* Work with the CTO to come up with a compromise solution, such as offering users an opt-in option to data sharing. 
+   * This could be strenuous on app development if different users are under different data privacy restrictions. Additionally, this could cause friction between departments. 
+
+
+5. ACM code of ethics discussion:
+There are numerous sections from the ACM Code of Ethics and Professional Conduct which relate to this ethical dilemma. Firstly is the overarching theme of contributing towards society and human wellbeing. The contribution to society from the collection of user data is quite minimal as it is just in the form of some economic output for some people. However, the act of breaching users’ privacy to obtain and sell their location data most definitely detracts from societal wellbeing. Additionally the modification of company policy towards user data could easily break trust between the company and user. If Beerz tries to perform the collection without the user knowing, by having the information on the new privacy policy hidden in the privacy policy which no one reads, the honesty of Beerz would be seriously compromised. There’s also a section specifically designated towards respecting privacy. This section emphasizes that steps need to be taken in order to ensure the maintained anonymity of the data to prevent re-identification. Finally, one of the professional leadership principles is to ensure that the public good is the central concern during all professional computing work. Even if the data is collected and sold completely anonymously, it is quite difficult to justify the practice of selling user data as aligning with the central concern of the public good. 
+
+
+6. My recommended action:
+I believe it would be quite unrealistic to talk the CEO down from all collection of user data. While it is the responsibility of a CEO to ensure the public good, it is also the responsibility of a CEO to provide shareholder value. A realistic solution would be to work with the CTO to come up with a realistic and ethical compromise. For example, having an opt-in option for data collection which is extremely specific about what data will be protected and the assurance that the data collected will be anonymized. Of course, this would require extensive work to guarantee the anonymity of the data. Along with this suggestion I would propose that the users who opt in are paid 50% of the profits that come from their data. While this amount of money would likely be insignificant to the user, it would go a long way as a gesture to improving trust with the user. Unfortunately, this idea would most likely be shot down by any CEO, however it is worth asking.
+
+
+In an ideal world, privacy should be more important than company profit in every way. However, this is rarely realistic. In my opinion, the best way to balance privacy with company profit is to be transparent with the user in terms of your actions and intentions and most importantly have the informed consent of users before selling their data.
